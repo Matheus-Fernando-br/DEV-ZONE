@@ -19,8 +19,6 @@ export const site = {
     "Dev Zone desenvolve sites, sistemas web, aplicações SaaS, APIs e automações sob medida — do planejamento ao deploy em produção.",
   contact: {
     email: "matheus1030br@gmail.com",
-    whatsapp: "5531986763652",
-    whatsappLabel: "+55 31 98676-3652",
     github: "https://github.com/Matheus-Fernando-br",
     linkedin: "https://www.linkedin.com/in/matheus-ribeiro-7b4a9822b/",
     instagram: "https://www.instagram.com/devzoneoficial",

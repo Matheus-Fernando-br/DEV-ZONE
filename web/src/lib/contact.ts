@@ -74,7 +74,7 @@ export async function submitContact(
   { timeoutMs = 90_000, fetcher = fetch }: { timeoutMs?: number; fetcher?: typeof fetch } = {},
 ): Promise<SubmitResult> {
   if (!endpoint) {
-    return { ok: false, error: "O envio pelo formulário está indisponível. Use o e-mail ou o WhatsApp ao lado." };
+    return { ok: false, error: "O envio pelo formulário está indisponível. Use o e-mail ao lado." };
   }
   let response: Response;
   try {
