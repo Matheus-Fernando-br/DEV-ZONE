@@ -1,0 +1,224 @@
+/* Selection frame + live dimension rulers.
+   One orchestrated entrance: frame draws, handles land, rulers extend. */
+
+.zone {
+  --handle: 9px;
+  --ruler-gap: 14px;
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-rows: auto auto;
+  column-gap: var(--ruler-gap);
+  row-gap: var(--s-2);
+}
+
+.frame {
+  position: relative;
+  grid-column: 1;
+  grid-row: 2;
+  padding: clamp(1.25rem, 0.6rem + 2.4vw, 2.75rem) clamp(1rem, 0.5rem + 2.2vw, 2.75rem);
+  outline: 1.5px solid var(--signal);
+  outline-offset: -0.75px;
+  animation: frame-draw 900ms var(--ease-in-out) both;
+}
+
+.content {
+  position: relative;
+  animation: content-in 800ms var(--ease-out) 250ms both;
+}
+
+.tag {
+  position: absolute;
+  bottom: 100%;
+  left: -1.5px;
+  margin-bottom: 6px;
+  color: var(--signal);
+  font-size: var(--t-micro);
+  font-weight: 600;
+  font-stretch: var(--w-narrow);
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  animation: fade 400ms var(--ease-out) 700ms both;
+}
+
+.handle {
+  position: absolute;
+  width: var(--handle);
+  height: var(--handle);
+  background: var(--surface);
+  border: 1.5px solid var(--signal);
+  animation: handle-in 360ms var(--ease-out) both;
+}
+
+.tl {
+  top: calc(var(--handle) / -2);
+  left: calc(var(--handle) / -2);
+  animation-delay: 650ms;
+}
+
+.tr {
+  top: calc(var(--handle) / -2);
+  right: calc(var(--handle) / -2);
+  animation-delay: 720ms;
+}
+
+.bl {
+  bottom: calc(var(--handle) / -2);
+  left: calc(var(--handle) / -2);
+  animation-delay: 790ms;
+}
+
+.br {
+  bottom: calc(var(--handle) / -2);
+  right: calc(var(--handle) / -2);
+  animation-delay: 860ms;
+}
+
+/* Rulers */
+.rulerTop,
+.rulerSide {
+  display: flex;
+  align-items: center;
+  gap: var(--s-2);
+  color: var(--signal);
+  font-size: var(--t-micro);
+  font-weight: 560;
+  font-stretch: var(--w-narrow);
+  font-variant-numeric: tabular-nums;
+  animation: fade 500ms var(--ease-out) 950ms both;
+}
+
+.rulerTop {
+  grid-column: 1;
+  grid-row: 1;
+  padding-left: 7rem;
+}
+
+.rulerSide {
+  grid-column: 2;
+  grid-row: 2;
+  flex-direction: column;
+  width: 2.25rem;
+}
+
+.rulerLine {
+  position: relative;
+  flex: 1;
+  background: currentColor;
+  opacity: 0.55;
+}
+
+.rulerTop .rulerLine {
+  height: 1px;
+  transform-origin: center;
+  animation: grow-x 600ms var(--ease-out) 950ms both;
+}
+
+.rulerSide .rulerLine {
+  width: 1px;
+  animation: grow-y 600ms var(--ease-out) 950ms both;
+}
+
+/* End caps on the rulers */
+.rulerTop .rulerLine:first-child::before,
+.rulerTop .rulerLine:last-child::after {
+  content: "";
+  position: absolute;
+  top: -4px;
+  width: 1px;
+  height: 9px;
+  background: currentColor;
+}
+
+.rulerTop .rulerLine:first-child::before {
+  left: 0;
+}
+
+.rulerTop .rulerLine:last-child::after {
+  right: 0;
+}
+
+.rulerSide .rulerLine:first-child::before,
+.rulerSide .rulerLine:last-child::after {
+  content: "";
+  position: absolute;
+  left: -4px;
+  width: 9px;
+  height: 1px;
+  background: currentColor;
+}
+
+.rulerSide .rulerLine:first-child::before {
+  top: 0;
+}
+
+.rulerSide .rulerLine:last-child::after {
+  bottom: 0;
+}
+
+.rulerValue {
+  min-width: 2.5ch;
+  text-align: center;
+}
+
+.rulerSide .rulerValue {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  min-width: 0;
+  min-height: 2.5ch;
+}
+
+@media (max-width: 639px) {
+  .zone {
+    --ruler-gap: 8px;
+  }
+
+  .rulerTop {
+    padding-left: 5.5rem;
+  }
+
+  .rulerSide {
+    width: 1rem;
+  }
+}
+
+@keyframes frame-draw {
+  from {
+    clip-path: inset(0 100% 100% 0);
+  }
+  to {
+    clip-path: inset(-48px -48px -48px -48px);
+  }
+}
+
+@keyframes content-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+}
+
+@keyframes handle-in {
+  from {
+    opacity: 0;
+    transform: scale(0.2);
+  }
+}
+
+@keyframes grow-x {
+  from {
+    transform: scaleX(0);
+  }
+}
+
+@keyframes grow-y {
+  from {
+    transform: scaleY(0);
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+}

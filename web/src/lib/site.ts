@@ -1,0 +1,37 @@
+// Single source for brand, URLs and confirmed contact details.
+
+function resolveSiteUrl() {
+  const explicit = process.env.NEXT_PUBLIC_SITE_URL;
+  if (explicit) return explicit.replace(/\/$/, "");
+  const vercel = process.env.VERCEL_PROJECT_PRODUCTION_URL;
+  if (vercel) return `https://${vercel}`;
+  return "http://localhost:3000";
+}
+
+export const site = {
+  name: "Dev Zone",
+  owner: "Matheus Fernando Ribeiro Martins",
+  ownerShort: "Matheus Fernando",
+  location: "Timóteo, MG",
+  url: resolveSiteUrl(),
+  title: "Dev Zone — Engenharia de software sob medida",
+  description:
+    "Dev Zone desenvolve sites, sistemas web, aplicações SaaS, APIs e automações sob medida — do planejamento ao deploy em produção.",
+  contact: {
+    email: "matheus1030br@gmail.com",
+    whatsapp: "5531986763652",
+    whatsappLabel: "+55 31 98676-3652",
+    github: "https://github.com/Matheus-Fernando-br",
+    linkedin: "https://www.linkedin.com/in/matheus-ribeiro-7b4a9822b/",
+  },
+} as const;
+
+export const apiUrl = (process.env.NEXT_PUBLIC_API_URL ?? "").replace(/\/$/, "");
+
+export const nav = [
+  { href: "#projetos", label: "Projetos" },
+  { href: "#servicos", label: "Serviços" },
+  { href: "#stack", label: "Tecnologias" },
+  { href: "#processo", label: "Processo" },
+  { href: "#contato", label: "Contato" },
+] as const;
