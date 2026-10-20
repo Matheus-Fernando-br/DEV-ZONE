@@ -69,7 +69,7 @@ const structuredData = {
     jobTitle: "Desenvolvedor Full Stack",
     sameAs: [site.contact.github, site.contact.linkedin],
   },
-  sameAs: [site.contact.github, site.contact.linkedin],
+  sameAs: [site.contact.instagram, site.contact.youtube, site.contact.github, site.contact.linkedin],
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

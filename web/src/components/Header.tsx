@@ -59,7 +59,7 @@ export function Header() {
         </nav>
 
         <a href="#contato" className={`button button-signal ${styles.cta}`}>
-          Pedir orçamento
+          Solicitar orçamento
         </a>
 
         <button
@@ -87,7 +87,7 @@ export function Header() {
             ))}
           </ul>
           <a href="#contato" className={`button button-signal ${styles.panelCta}`} onClick={() => setOpen(false)}>
-            Pedir orçamento
+            Solicitar orçamento
           </a>
         </nav>
       </div>

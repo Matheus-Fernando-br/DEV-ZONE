@@ -2,6 +2,13 @@ import { nav, site } from "@/lib/site";
 import styles from "./Footer.module.css";
 import { Wordmark } from "./Wordmark";
 
+const social = [
+  { label: "Instagram", href: site.contact.instagram },
+  { label: "YouTube", href: site.contact.youtube },
+  { label: "LinkedIn", href: site.contact.linkedin },
+  { label: "GitHub", href: site.contact.github },
+];
+
 export function Footer() {
   const year = new Date().getFullYear();
 
@@ -33,16 +40,14 @@ export function Footer() {
             <li>
               <a href={`mailto:${site.contact.email}`}>{site.contact.email}</a>
             </li>
-            <li>
-              <a href={site.contact.github} target="_blank" rel="noopener noreferrer">
-                GitHub<span className="visually-hidden"> (abre em nova aba)</span>
-              </a>
-            </li>
-            <li>
-              <a href={site.contact.linkedin} target="_blank" rel="noopener noreferrer">
-                LinkedIn<span className="visually-hidden"> (abre em nova aba)</span>
-              </a>
-            </li>
+            {social.map((item) => (
+              <li key={item.label}>
+                <a href={item.href} target="_blank" rel="noopener noreferrer">
+                  {item.label}
+                  <span className="visually-hidden"> (abre em nova aba)</span>
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
       </div>

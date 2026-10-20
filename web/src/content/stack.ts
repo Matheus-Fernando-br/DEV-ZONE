@@ -9,9 +9,9 @@ export type StackGroup = {
 
 export const stack: StackGroup[] = [
   {
-    area: "Interfaces",
-    items: ["React", "Next.js", "TypeScript", "JavaScript", "HTML e CSS", "Tailwind CSS", "Vite"],
-    usedIn: "FINC, Retiro VOLTEMOS, Gerador de Currículo, S.A.I.T.E.",
+    area: "Interfaces e mobile",
+    items: ["React", "Next.js", "React Native", "Expo", "TypeScript", "JavaScript", "HTML e CSS", "Tailwind CSS"],
+    usedIn: "FINC, Gerador de Currículo, Obra Fácil, Retiro VOLTEMOS, S.A.I.T.E.",
   },
   {
     area: "Backend e APIs",
