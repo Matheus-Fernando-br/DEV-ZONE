@@ -1,0 +1,110 @@
+.contact {
+  position: relative;
+  padding-block: var(--section-y);
+  background: var(--ink);
+  color: var(--on-ink);
+  overflow: hidden;
+}
+
+/* The drafting grid returns, quieter, on the dark surface */
+.contact::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(to right, rgb(255 255 255 / 0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(255 255 255 / 0.045) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: linear-gradient(to bottom, #000, transparent 70%);
+  -webkit-mask-image: linear-gradient(to bottom, #000, transparent 70%);
+  pointer-events: none;
+}
+
+.layout {
+  position: relative;
+  display: grid;
+  gap: var(--s-8);
+}
+
+.intro {
+  display: grid;
+  gap: var(--s-5);
+  align-content: start;
+}
+
+.title {
+  max-width: 14ch;
+  font-size: var(--t-h2);
+  font-stretch: 112%;
+  line-height: 1.04;
+  letter-spacing: -0.035em;
+}
+
+.lead {
+  max-width: 34rem;
+  color: var(--on-ink-muted);
+  font-size: var(--t-lead);
+  line-height: 1.55;
+}
+
+.channels {
+  display: grid;
+  margin: var(--s-4) 0 0;
+  border-top: 1px solid var(--on-ink-line);
+}
+
+.channel {
+  display: grid;
+  grid-template-columns: 6.5rem minmax(0, 1fr);
+  gap: var(--s-4);
+  padding-block: var(--s-3);
+  border-bottom: 1px solid var(--on-ink-line);
+  font-size: var(--t-small);
+}
+
+.channel dt {
+  color: var(--on-ink-muted);
+}
+
+.channel dd {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.channel a {
+  color: var(--on-ink);
+  text-decoration: none;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size var(--d-base) var(--ease-out);
+}
+
+.channel a:hover {
+  background-size: 100% 1px;
+}
+
+.channel a:focus-visible {
+  outline-color: #8c97ff;
+}
+
+.panel {
+  display: grid;
+  gap: var(--s-5);
+  padding: clamp(1.25rem, 0.75rem + 2vw, 2.5rem);
+  border: 1px solid var(--on-ink-line);
+  border-radius: var(--r-l);
+  background: rgb(19 34 58 / 0.6);
+}
+
+.panelTitle {
+  font-size: var(--t-h3);
+}
+
+@media (min-width: 1024px) {
+  .layout {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+    gap: clamp(var(--s-7), 2rem + 4vw, 7rem);
+  }
+}
