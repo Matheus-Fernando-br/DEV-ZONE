@@ -5,7 +5,7 @@ import { ContactForm } from "./ContactForm";
 const channels = [
   { label: "E-mail", value: site.contact.email, href: `mailto:${site.contact.email}` },
   { label: "WhatsApp", value: site.contact.whatsappLabel, href: `https://wa.me/${site.contact.whatsapp}`, external: true },
-  { label: "LinkedIn", value: "Matheus Ribeiro", href: site.contact.linkedin, external: true },
+  { label: "LinkedIn", value: "Matheus Fernando", href: site.contact.linkedin, external: true },
   { label: "GitHub", value: "Matheus-Fernando-br", href: site.contact.github, external: true },
 ];
 
