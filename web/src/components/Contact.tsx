@@ -1,12 +1,7 @@
 import { site } from "@/lib/site";
 import styles from "./Contact.module.css";
 import { ContactForm } from "./ContactForm";
-
-const channels = [
-  { label: "E-mail", value: site.contact.email, href: `mailto:${site.contact.email}` },
-  { label: "LinkedIn", value: "Matheus Fernando", href: site.contact.linkedin, external: true },
-  { label: "GitHub", value: "Matheus-Fernando-br", href: site.contact.github, external: true },
-];
+import { SocialIcons } from "./SocialIcons";
 
 export function Contact() {
   return (
@@ -22,21 +17,14 @@ export function Contact() {
           </p>
 
           <dl className={styles.channels}>
-            {channels.map((channel) => (
-              <div key={channel.label} className={styles.channel}>
-                <dt>{channel.label}</dt>
-                <dd>
-                  <a
-                    href={channel.href}
-                    {...(channel.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                  >
-                    {channel.value}
-                    {channel.external && <span className="visually-hidden"> (abre em nova aba)</span>}
-                  </a>
-                </dd>
-              </div>
-            ))}
+            <div className={styles.channel}>
+              <dt>E-mail</dt>
+              <dd>
+                <a href={`mailto:${site.contact.email}`}>{site.contact.email}</a>
+              </dd>
+            </div>
           </dl>
+          <SocialIcons />
         </div>
 
         <div className={styles.panel}>

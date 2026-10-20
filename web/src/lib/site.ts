@@ -10,15 +10,12 @@ function resolveSiteUrl() {
 
 export const site = {
   name: "Dev Zone",
-  owner: "Matheus Fernando Ribeiro Martins",
-  ownerShort: "Matheus Fernando",
-  location: "Timóteo, MG",
   url: resolveSiteUrl(),
   title: "Dev Zone — Engenharia de software sob medida",
   description:
     "Dev Zone desenvolve sites, sistemas web, aplicações SaaS, APIs e automações sob medida — do planejamento ao deploy em produção.",
   contact: {
-    email: "matheus1030br@gmail.com",
+    email: "devzonedigital@gmail.com",
     github: "https://github.com/Matheus-Fernando-br",
     linkedin: "https://www.linkedin.com/in/matheus-ribeiro-7b4a9822b/",
     instagram: "https://www.instagram.com/devzoneoficial",

@@ -57,6 +57,7 @@
 
 .actions :global(.button) {
   flex: 1 1 11rem;
+  white-space: nowrap;
 }
 
 .meta {
