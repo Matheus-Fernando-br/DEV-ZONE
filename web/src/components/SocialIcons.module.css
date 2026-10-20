@@ -1,0 +1,35 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-2);
+  margin: 0;
+}
+
+.link {
+  display: inline-grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 1px solid var(--on-ink-line);
+  border-radius: var(--r-s);
+  color: var(--on-ink-muted);
+  transition:
+    color var(--d-fast) var(--ease-out),
+    border-color var(--d-fast) var(--ease-out),
+    background-color var(--d-fast) var(--ease-out);
+}
+
+.link:hover {
+  color: var(--on-ink);
+  border-color: var(--on-ink-muted);
+  background: var(--ink-raised);
+}
+
+.link:focus-visible {
+  outline-color: #8c97ff;
+}
+
+.icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}

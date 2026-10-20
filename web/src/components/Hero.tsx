@@ -1,4 +1,3 @@
-import { site } from "@/lib/site";
 import styles from "./Hero.module.css";
 import { ZoneFrame } from "./ZoneFrame";
 
@@ -32,7 +31,7 @@ export function Hero() {
 
         <div className={styles.meta}>
           <p className={styles.byline}>
-            Projetado e desenvolvido por <strong>{site.ownerShort}</strong>, desenvolvedor full stack em {site.location}.
+            Estúdio de desenvolvimento de software sob medida.
           </p>
           <ul role="list" className={styles.capabilities} aria-label="O que a Dev Zone desenvolve">
             {capabilities.map((item) => (

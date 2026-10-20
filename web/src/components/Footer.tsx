@@ -1,13 +1,7 @@
 import { nav, site } from "@/lib/site";
 import styles from "./Footer.module.css";
+import { SocialIcons } from "./SocialIcons";
 import { Wordmark } from "./Wordmark";
-
-const social = [
-  { label: "Instagram", href: site.contact.instagram },
-  { label: "YouTube", href: site.contact.youtube },
-  { label: "LinkedIn", href: site.contact.linkedin },
-  { label: "GitHub", href: site.contact.github },
-];
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -18,8 +12,7 @@ export function Footer() {
         <div className={styles.brand}>
           <Wordmark tone="light" />
           <p>
-            Desenvolvimento de software sob medida por {site.ownerShort}, em {site.location}. Sites, sistemas web, SaaS,
-            APIs e automações.
+            Desenvolvimento de software sob medida: sites, sistemas web, SaaS, APIs e automações.
           </p>
         </div>
 
@@ -40,15 +33,8 @@ export function Footer() {
             <li>
               <a href={`mailto:${site.contact.email}`}>{site.contact.email}</a>
             </li>
-            {social.map((item) => (
-              <li key={item.label}>
-                <a href={item.href} target="_blank" rel="noopener noreferrer">
-                  {item.label}
-                  <span className="visually-hidden"> (abre em nova aba)</span>
-                </a>
-              </li>
-            ))}
           </ul>
+          <SocialIcons className={styles.social} />
         </div>
       </div>
 

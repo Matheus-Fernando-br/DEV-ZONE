@@ -17,8 +17,8 @@ export const metadata: Metadata = {
   title: site.title,
   description: site.description,
   applicationName: site.name,
-  authors: [{ name: site.owner, url: site.contact.github }],
-  creator: site.owner,
+  authors: [{ name: site.name }],
+  creator: site.name,
   keywords: [
     "desenvolvimento de software",
     "desenvolvedor full stack",
@@ -28,7 +28,6 @@ export const metadata: Metadata = {
     "SaaS",
     "APIs",
     "automação",
-    "Timóteo MG",
   ],
   alternates: { canonical: "/" },
   openGraph: {
@@ -62,13 +61,6 @@ const structuredData = {
   url: site.url,
   email: site.contact.email,
   areaServed: { "@type": "Country", name: "Brasil" },
-  address: { "@type": "PostalAddress", addressLocality: "Timóteo", addressRegion: "MG", addressCountry: "BR" },
-  founder: {
-    "@type": "Person",
-    name: site.owner,
-    jobTitle: "Desenvolvedor Full Stack",
-    sameAs: [site.contact.github, site.contact.linkedin],
-  },
   sameAs: [site.contact.instagram, site.contact.youtube, site.contact.github, site.contact.linkedin],
 };
 
