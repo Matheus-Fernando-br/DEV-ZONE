@@ -59,7 +59,7 @@ export const projects: Project[] = [
     demo: "https://geradorcurriculoonline.vercel.app",
     repo: "https://github.com/Matheus-Fernando-br/Gerador-de-Curriculo-Online",
     image: "/projects/gerador-curriculo.webp",
-    imageAlt: "Tela inicial do Gerador de Currículo Online com o modelo de currículo ao fundo.",
+    imageAlt: "Página inicial do Gerador de Currículo Online com o título \"Chega de não ser convocado para entrevistas\" e o botão para começar.",
     tier: "highlight",
   },
   {
