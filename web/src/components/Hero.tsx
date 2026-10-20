@@ -22,7 +22,7 @@ export function Hero() {
           </p>
           <div className={styles.actions}>
             <a href="#contato" className="button button-signal">
-              Pedir orçamento
+              Solicitar orçamento
             </a>
             <a href="#projetos" className="button button-ghost">
               Ver projetos

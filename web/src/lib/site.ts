@@ -23,6 +23,8 @@ export const site = {
     whatsappLabel: "+55 31 98676-3652",
     github: "https://github.com/Matheus-Fernando-br",
     linkedin: "https://www.linkedin.com/in/matheus-ribeiro-7b4a9822b/",
+    instagram: "https://www.instagram.com/devzoneoficial",
+    youtube: "https://www.youtube.com/@devzoneoficial",
   },
 } as const;
 

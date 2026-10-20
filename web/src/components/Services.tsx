@@ -14,7 +14,7 @@ export function Services() {
             Soluções feitas sob medida para o seu problema, com a mesma pessoa cuidando do projeto do início ao fim.
           </p>
           <a href="#contato" className={`button button-signal ${styles.headCta}`}>
-            Pedir orçamento
+            Solicitar orçamento
           </a>
         </header>
 
