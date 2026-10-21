@@ -11,7 +11,7 @@ export const stack: StackGroup[] = [
   {
     area: "Interfaces e mobile",
     items: ["React", "Next.js", "React Native", "Expo", "TypeScript", "JavaScript", "HTML e CSS", "Tailwind CSS"],
-    usedIn: "FINC, Gerador de Currículo, Obra Fácil, Retiro VOLTEMOS, S.A.I.T.E.",
+    usedIn: "FINC, Gerador de Currículo, Obra Fácil, Genoma Relatórios, Retiro VOLTEMOS",
   },
   {
     area: "Backend e APIs",
