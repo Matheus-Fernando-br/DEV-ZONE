@@ -97,6 +97,7 @@ export const projects: Project[] = [
     ],
     stack: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
     status: "Publicado",
+    demo: "https://genomatimoteo.vercel.app",
     repo: "https://github.com/Matheus-Fernando-br/GENOMA",
     image: "/projects/genoma-relatorios.webp",
     imageAlt: "Formulário de solicitação de evento ao lado da pré-visualização do documento oficial em A4.",
