@@ -17,7 +17,7 @@ export const site = {
   contact: {
     email: "devzonedigital@gmail.com",
     github: "https://github.com/Matheus-Fernando-br",
-    linkedin: "https://www.linkedin.com/in/matheus-ribeiro-7b4a9822b/",
+    linkedin: "https://www.linkedin.com/in/matheus-fernando-",
     instagram: "https://www.instagram.com/devzoneoficial",
     youtube: "https://www.youtube.com/@devzoneoficial",
   },
