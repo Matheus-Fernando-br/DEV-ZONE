@@ -12,11 +12,12 @@ export const projectTypes = {
 } as const;
 
 export const budgets = {
-  "ate-3k": "Até R$ 3 mil",
-  "3k-10k": "R$ 3 mil a R$ 10 mil",
-  "10k-30k": "R$ 10 mil a R$ 30 mil",
-  "30k+": "Acima de R$ 30 mil",
   "a-definir": "Ainda não definido",
+  "ate-200": "Até R$ 200,00",
+  "200-300": "R$ 200,00 a R$ 300,00",
+  "300-600": "R$ 300,00 a R$ 600,00",
+  "600-1000": "R$ 600,00 a R$ 1.000,00",
+  "1000+": "Mais de R$ 1.000,00",
 } as const;
 
 export type ProjectType = keyof typeof projectTypes;

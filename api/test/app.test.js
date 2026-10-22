@@ -11,7 +11,7 @@ const valid = () => ({
   name: "Maria Silva",
   email: "Maria@Example.com",
   projectType: "web",
-  budget: "3k-10k",
+  budget: "300-600",
   message: "Preciso de um sistema para controlar pedidos da minha loja.",
   website: "",
   startedAt: Date.now() - 10_000,
@@ -201,8 +201,8 @@ describe("delivery", () => {
   });
 
   it("formats a readable notification", () => {
-    const text = formatTelegramMessage({ ...contact, budget: "30k+" });
+    const text = formatTelegramMessage({ ...contact, budget: "1000+" });
     assert.match(text, /DEV ZONE/);
-    assert.match(text, /Acima de R\$ 30 mil/);
+    assert.match(text, /Mais de R\$ 1\.000,00/);
   });
 });
